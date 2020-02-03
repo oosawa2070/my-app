@@ -1,0 +1,19 @@
+%h1 Blogposts#delete
+%p ※投稿記事の一覧
+%table
+  %tr
+    %th Id
+    %td= @blogpost.id
+  %tr
+    %th title
+    %td= @blogpost.title
+  %tr
+    %th read
+    %td= @blogpost.read
+  %tr
+    %th content
+    %td= @blogpost.content
+= form_tag controller: "blogposts", action: "delete" do
+  = hidden_field_tag "id", {value: @blogpost.id}
+  = submit_tag "送信"
+　

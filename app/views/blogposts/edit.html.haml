@@ -1,0 +1,34 @@
+%h1 Blogposts#edit
+%p
+  ※「#{@blogpost.title}」の編集
+- if @blogpost.errors.any?
+  %ul
+    - @blogpost.errors.full_messages.each do |err|
+      %li= err
+%table
+  = form_for(@blogpost, url:{controller:'blogposts', action:'edit'}) do |form|
+    %tr
+      %th name
+      %td= form.text_field :title
+    %tr
+      %th memo
+      %td= form.text_field :read
+    %tr
+      %th message
+      %td= form.text_area :content, {cols:40, rows:10}
+    %tr
+      %th Genre ID
+      %td= form.text_field :bloggenre_id
+    %tr
+      %th
+      %td= form.submit "送信"
+%hr/
+%p
+%table
+  %tr
+    %th Id
+    %th Genre
+  - @genres.each do |obj|
+    %tr
+      %td= obj.id
+      %td= obj.name
