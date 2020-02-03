@@ -1,0 +1,14 @@
+- @data.each do |obj|
+  %h3.top_title
+    %a{:href => "/blogs/show/#{obj.id}"}
+      = obj.title
+  %p.top_read
+    = obj.read
+    %span.top_created
+      (#{obj.created_at})
+  %hr/
+.navigate
+  - if @page_num > 0 then
+    %a{:href => "/blogs/#{@page_num -1}"} ＜＜前のページへ
+  %span
+  %a{:href => "/blogs/#{@page_num +1}"} 次のページへ＞＞

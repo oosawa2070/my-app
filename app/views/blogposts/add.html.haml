@@ -1,0 +1,33 @@
+%h1 Blogposts#add
+%p ※ジャンル・データの作成
+- if @blogpost.errors.any?
+  %ul
+    - @blogpost.errors.full_message.each do |err|
+      %li= err
+%table
+  = form_for(@blogpost, url:{controller:'blogposts', action:'add'}) do |form|
+    %tr
+      %th Title
+      %td= form.text_field :title
+    %tr
+      %th Read
+      %td= form.text_field :read
+    %tr
+      %th Content
+      %td= form.text_area :content, {cols:40, rows:10}
+    %tr
+      %th Genre ID
+      %td= form.text_field :bloggenre_id
+    %tr
+      %th
+      %td= form.submit "送信"
+%hr/
+%p
+%table
+  %tr
+    %th Id
+    %th Genre
+  - @genres.each do |obj|
+    %tr
+      %td= obj.id
+      %td= obj.name

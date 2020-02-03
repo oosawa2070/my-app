@@ -1,0 +1,8 @@
+%h3.show_title= @blogpost.title
+%p.show_read= @blogpost.read + '[' + @blogpost.bloggenre.name + ']'
+- contents = @blogpost.content.split "\n"
+.show_content
+  - contents.each.do |paragraph|
+  %p= paragraph
+%p.show_created
+  (#{@blogpost.created_at})

@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title miniblog
+    = csrf_meta_tags
+    = stylesheet_link_tag 'blogs', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag @blogconfig.stylename,'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'blogs', 'data-turbolinks-track': 'reload'
+  %body
+    %header#header
+      %h1
+        %a{:href => "/blogs"}= @blogconfig.title
+      %h2= @blogconfig.subtitle
+    %hr/
+    #side
+      - Bloggenre.all.each do |genre|
+        %p
+          %a{:href => "/blogs/genre/#{genre.id}"}
+            = genre.name
+    %main#main
+      = yield
