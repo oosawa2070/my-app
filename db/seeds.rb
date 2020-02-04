@@ -5,4 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Blogconfig.create(id:1, title:'my blog', subtitle:'個人用ミニアプリで作ったブログです。', stylename:'gray')
+Blogconfig.create(id:1, title:'技術ブログ', subtitle:'個人用ミニアプリで作ったブログです。', stylename:'gray')

@@ -2,7 +2,7 @@
 %p.show_read= @blogpost.read + '[' + @blogpost.bloggenre.name + ']'
 - contents = @blogpost.content.split "\n"
 .show_content
-  - contents.each.do |paragraph|
+- contents.each.do|paragraph|
   %p= paragraph
-%p.show_created
-  (#{@blogpost.created_at})
+  %p.show_created
+    (#{@blogpost.created_at})
