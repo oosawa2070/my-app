@@ -32,3 +32,4 @@ has_many:blogpost
 |bloggenre_id|integer|null :false|
 
 belongs_to:bloggenre
+
