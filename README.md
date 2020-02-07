@@ -33,4 +33,4 @@ has_many:blogpost
 
 belongs_to:bloggenre
 
-https://github.com/oosawa2070/my-app/issues/4#issue-561578147
+![スクリーンショット 0032-02-07 20 15 05](https://user-images.githubusercontent.com/52499497/74025716-eb2ba300-49e7-11ea-9503-3ca541410105.png)
