@@ -33,3 +33,4 @@ has_many:blogpost
 
 belongs_to:bloggenre
 
+https://github.com/oosawa2070/my-app/issues/4#issue-561578147
