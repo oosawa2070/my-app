@@ -1,3 +1,11 @@
+# ruby on railsでブログを作成!
+
+ポートフォリオ用にruby on railsを使用し、ブログを作っています！
+現在、制作中で今後、機能を追加していく予定です。
+今後⇨新規ユーザー登録機能
+⇨本番環境にデプロイ
+⇨and more
+
 ## blogconfigテーブル
 
 |Column|Type|Options|
