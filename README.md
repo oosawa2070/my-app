@@ -1,24 +1,27 @@
-# README
+## blogconfigテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|title|text|null :false|
+|subtitle|text|null :false|
+|stylename|text|null: false|
 
-Things you may want to cover:
+## bloggenreテーブル
 
-* Ruby version
+|Column|Type|Options|
+|------|----|-------|
+|name|text|null :false|
+|memo|text|null :false|
 
-* System dependencies
+has_many:blogpost
 
-* Configuration
+## blogpostテーブル
 
-* Database creation
+|Column|Type|Options|
+|------|----|-------|
+|title|text|null :false|
+|read|text|null :false|
+|content|text|null: false|
+|bloggenre_id|integer|null :false|
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+belongs_to:bloggenre
